@@ -10,51 +10,11 @@ body {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+
   min-height: 100vh;
   /* 黑色背景色 */
   background-color: #000;
 }
-
-
-/* 聚光灯*/
-h2{
-    color: #333;
-    /* 转大写 */
-    /* text-transform: uppercase; */
-    font-size: 50px;
-    /* 相对定位 */
-    position: relative;
-}
-h2::after{
-    content: "朵朵";
-    /* 颜色为透明 */
-    color: transparent;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: linear-gradient(to right,#ff69b3,#fe0000,#ffa401,#ffff01,#008102,#40e1d2,#410098,#9400d4);
-    /* 以文字的范围来裁剪背景图片 */
-    background-clip: text;
-    -webkit-background-clip: text;
-    /* 将元素裁剪为一个圆形（100px表示圆的直径，0% 50%表示圆心的位置） */
-    clip-path: circle(60px at 0% 50%);
-    /* 执行动画（动画 时长 infinite表示无限次播放） */
-    animation: light 5s infinite;
-}
-
-/* 定义动画 改变圆心的位置 */
-@keyframes light{
-    0%{
-        clip-path: circle(60px at 0% 50%);
-    }
-    50%{
-        clip-path: circle(60px at 100% 50%);
-    }
-    100%{
-        clip-path: circle(60px at 0% 50%);
-    }
-}
-
 
 #heart {
   /* 心的显示区域宽高 */
@@ -70,10 +30,7 @@ h2::after{
   color: white;
   font-size: 5em;
   text-align: center;
-  /* text-shadow: 0 0 0.05em #fff, 0 0 0.2em #ee3e3e, 0 0 0.3em #f80808; */
-  text-shadow: 0 0 0.05em #ff69b3, 0 0 0.2em #fe0000, 0 0 0.3em #ffa401;
-
-  /* #ff69b3,#fe0000,#ffa401,#ffff01,#008102,#40e1d2,#410098,#9400d4) */
+  text-shadow: 0 0 0.05em #fff, 0 0 0.2em #ee3e3e, 0 0 0.3em #f80808;
   /* 稍微向上移一点，看起来在中间 */
   margin-top: -0.6em;
   /* 不让选中 */
@@ -108,7 +65,7 @@ h2::after{
     animation: animate-small 1.2s infinite;
   }
 
-  #text,#header_title {
+  #text {
     /* 文字也小一点 */
     font-size: 4em;
     margin-top: -0.3em;
