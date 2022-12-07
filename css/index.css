@@ -7,9 +7,7 @@
 body {
   /* 常规居中显示 */
   display: flex;
- 
-  flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   overflow: hidden;
   min-height: 100vh;
@@ -72,7 +70,10 @@ h2::after{
   color: white;
   font-size: 5em;
   text-align: center;
-  text-shadow: 0 0 0.05em #fff, 0 0 0.2em #ee3e3e, 0 0 0.3em #f80808;
+  /* text-shadow: 0 0 0.05em #fff, 0 0 0.2em #ee3e3e, 0 0 0.3em #f80808; */
+  text-shadow: 0 0 0.05em #ff69b3, 0 0 0.2em #fe0000, 0 0 0.3em #ffa401;
+
+  /* #ff69b3,#fe0000,#ffa401,#ffff01,#008102,#40e1d2,#410098,#9400d4) */
   /* 稍微向上移一点，看起来在中间 */
   margin-top: -0.6em;
   /* 不让选中 */
